@@ -20,14 +20,14 @@ public class MyGdxGame extends ApplicationAdapter {
 	@Override
 	public void create() {
 		badlogic=new Texture("badlogic.jpg"); // mejor utilizar png
-		sierra=new Texture("nave2-4.png");
+		sierra=new Texture("sierra.png");
 		batch = new SpriteBatch();
 
 		x=Gdx.graphics.getWidth();  //ancho pantalla
 		y=Gdx.graphics.getHeight(); // alto pantalla
 		xBad=badlogic.getWidth(); // ancho imagen
 		yBad=badlogic.getHeight(); // alto imagen
-		regionSierra=new TextureRegion(sierra,0,128,256,196);
+		regionSierra=new TextureRegion(sierra,0,72,256,85);
 
 
 
@@ -50,7 +50,8 @@ public class MyGdxGame extends ApplicationAdapter {
 		Gdx.graphics.getHeight(); // alto
 		batch.begin();
 		batch.draw(badlogic,0,0,20,20); // está en la izquierda debajo x, y
-		batch.draw(regionSierra,128,0);
+		//batch.draw(regionSierra,128,0);
+		batch.draw(sierra,128,0);
 
 
 		batch.end();
