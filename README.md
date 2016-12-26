@@ -1,2 +1,3 @@
-# gdx-ejemplo-textureregion
-- Ejemplo libgdx textureregion  
+# Libgdx Ejemplo textureregion
+- Ejemplo libgdx textureregion
+- Ejemplo clase InputAdapter

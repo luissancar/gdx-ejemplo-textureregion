@@ -19,6 +19,10 @@ public class MyGdxGame extends ApplicationAdapter {
 
 	@Override
 	public void create() {
+		proesador p=new proesador(); // conectamos la aplicacion al procesador entrada
+		Gdx.input.setInputProcessor(p);
+
+
 		badlogic=new Texture("badlogic.jpg"); // mejor utilizar png
 		sierra=new Texture("sierra.png");
 		batch = new SpriteBatch();
@@ -48,6 +52,8 @@ public class MyGdxGame extends ApplicationAdapter {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT); //limpia buffer tarjeta
 		Gdx.graphics.getWidth();  //ancho
 		Gdx.graphics.getHeight(); // alto
+		if (Gdx.input.justTouched())  // siempre se está ejecutando
+			System.out.println("Pantalla tocada");
 		batch.begin();
 		batch.draw(badlogic,0,0,20,20); // está en la izquierda debajo x, y
 		//batch.draw(regionSierra,128,0);
